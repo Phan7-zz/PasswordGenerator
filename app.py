@@ -47,24 +47,24 @@ def start():
     info3 = get_info3()
 
     password = ''
-    if info2 == 's': #Quer números
-        if info3 == 's': #Quer caracteres especias
+    if info2 == 's':
+        if info3 == 's':
             for a in range(int(info1)):
                 character_type = random.choice(all)
                 password += random.choice(character_type)
-        else: #Não quer caracteres especiais
+        else:
             all.pop(3)
             for a in range(int(info1)):
                 character_type = random.choice(all)
                 password += random.choice(character_type)
 
-    else: #Não quer números
+    else:
         all.pop(2)
-        if info3 == 's': #Quer caracteres especiais
+        if info3 == 's':
             for a in range(int(info1)):
                 character_type = random.choice(all)
                 password += random.choice(character_type)
-        else: #Não quer caracteres especiais
+        else:
             all.pop(2)
             for a in range(int(info1)):
                 character_type = random.choice(all)
