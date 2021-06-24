@@ -76,4 +76,6 @@ def start():
     if repeat.lower() == 's':
         start()
 
-start()
+while True():
+    start()
+    input('Do you whant to restart? Press Enter to "Yes"') 
