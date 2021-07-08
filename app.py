@@ -27,7 +27,7 @@ def start():
             info2 = input('Digite "S" para sim e "N" para não!\n')
         
         if info2.lower() in ('s', 'n'):
-            return info2
+            return info2.lower()
         else:
             get_info2(True)
 
@@ -38,7 +38,7 @@ def start():
             info3 = input('Digite "S" para sim e "N" para não!\n')
         
         if info3.lower() in ('s', 'n'):
-            return info3
+            return info3.lower()
         else:
             get_info3(True)
 
