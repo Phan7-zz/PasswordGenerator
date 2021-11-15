@@ -7,13 +7,13 @@ def start():
     simbols = '!@#$%&*()-_=+[]{}/?'
     all = [alphabet_low, alphabet_cap, numbers, simbols]
 
-    print('Bem vindo ao gerador de senhas!')
+    print('Welcome to password generator!')
 
     def get_info1(warn=False):
         if warn is False:
-            info1 = input('Quantos caracteres você quer em sua senha?\n')
+            info1 = input('How many digits do you want in your password?\n')
         else:
-            info1 = input('Digite um número inteiro!\n')
+            info1 = input('Type a valid number!\n')
         
         if info1.isnumeric():
             return info1
@@ -22,9 +22,9 @@ def start():
 
     def get_info2(warn=False):
         if warn is False:
-            info2 = input('Você quer números na senha? Digite "S" para sim e "N" para não\n')
+            info2 = input('Do you want numbers in the password? [Y, N]\n')
         else:
-            info2 = input('Digite "S" para sim e "N" para não!\n')
+            info2 = input('Type "S" for yes or "N" for no!\n')
         
         if info2.lower() in ('s', 'n'):
             return info2.lower()
@@ -33,9 +33,9 @@ def start():
 
     def get_info3(warn=False):
         if warn is False:
-            info3 = input('Pra finalizar, você deseja caracteres especiais nela? Digite "S" para sim e "N" para não\n')
+            info3 = input('Do your want especial digits on the password? [Y, N]\n')
         else:
-            info3 = input('Digite "S" para sim e "N" para não!\n')
+            info3 = input('Type "S" for yes or "N" for no!\n')
         
         if info3.lower() in ('s', 'n'):
             return info3.lower()
@@ -72,7 +72,7 @@ def start():
         
     print(password)
 
-    repeat = input('Você quer repetir? Se sim, digite "S"\n')
+    repeat = input('Do you want to repeat? [Y]\n')
     if repeat.lower() == 's':
         start()
 
