@@ -24,7 +24,7 @@ def start():
         if warn is False:
             info2 = input('Do you want numbers in the password? [Y, N]\n')
         else:
-            info2 = input('Type "S" for yes or "N" for no!\n')
+            info2 = input('Type "Y" for yes or "N" for no!\n')
         
         if info2.lower() in ('y', 'n'):
             return info2.lower()
@@ -35,7 +35,7 @@ def start():
         if warn is False:
             info3 = input('Do your want especial digits on the password? [Y, N]\n')
         else:
-            info3 = input('Type "S" for yes or "N" for no!\n')
+            info3 = input('Type "Y" for yes or "N" for no!\n')
         
         if info3.lower() in ('y', 'n'):
             return info3.lower()
@@ -47,8 +47,8 @@ def start():
     info3 = get_info3()
 
     password = ''
-    if info2 == 's':
-        if info3 == 's':
+    if info2 == 'y':
+        if info3 == 'y':
             for a in range(int(info1)):
                 character_type = random.choice(all)
                 password += random.choice(character_type)
@@ -60,7 +60,7 @@ def start():
 
     else:
         all.pop(2)
-        if info3 == 's':
+        if info3 == 'y':
             for a in range(int(info1)):
                 character_type = random.choice(all)
                 password += random.choice(character_type)
@@ -73,7 +73,7 @@ def start():
     print(password)
 
     repeat = input('Do you want to repeat? [Y]\n')
-    if repeat.lower() == 's':
+    if repeat.lower() == 'y':
         start()
 
 start()
