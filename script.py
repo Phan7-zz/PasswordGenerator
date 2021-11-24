@@ -26,7 +26,7 @@ def start():
         else:
             info2 = input('Type "S" for yes or "N" for no!\n')
         
-        if info2.lower() in ('s', 'n'):
+        if info2.lower() in ('y', 'n'):
             return info2.lower()
         else:
             get_info2(True)
@@ -37,7 +37,7 @@ def start():
         else:
             info3 = input('Type "S" for yes or "N" for no!\n')
         
-        if info3.lower() in ('s', 'n'):
+        if info3.lower() in ('y', 'n'):
             return info3.lower()
         else:
             get_info3(True)
